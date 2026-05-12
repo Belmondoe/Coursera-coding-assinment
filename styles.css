@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --color-dark:    #1a1a1a;
+  --color-mid:     #3d3d3d;
+  --color-accent:  #c0392b;
+  --color-light:   #f5f0eb;
+  --color-section: #d6cfc7;
+  --color-nav:     #2c2c2c;
+  --color-nav-text:#f5f0eb;
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'Lato', Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 300;
+}
+
+.navbar {
+  background-color: var(--color-nav);
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--color-nav-text) !important;
+  letter-spacing: 0.5px;
+  padding: 16px 20px;
+}
+
+.navbar-toggle {
+  border-color: var(--color-nav-text);
+  margin-top: 12px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: var(--color-nav-text);
+}
+
+.navbar-collapse {
+  background-color: var(--color-mid);
+  padding: 0;
+}
+
+.nav.navbar-nav li a {
+  font-size: 15px;
+  color: var(--color-nav-text) !important;
+  text-align: center;
+  padding: 14px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.2s;
+}
+
+.nav.navbar-nav li a:hover {
+  background-color: var(--color-accent) !important;
+}
+
+#menu-heading {
+  padding: 50px 20px 30px;
+  text-align: center;
+}
+
+#menu-heading h2 {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-dark);
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+#menu-heading h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  margin: 12px auto 0;
+}
+
+.menu-section {
+  background-color: var(--color-section);
+  min-height: 700px;
+  padding: 30px 25px;
+}
+
+.menu-section h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-dark);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(0,0,0,0.15);
+}
+
+.menu-section p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-mid);
+}
+
+.menu-section .back-to-top {
+  display: block;
+  margin-top: 20px;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sections-row {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .menu-section { margin-bottom: 10px; }
+  #menu-heading h2 { font-size: 32px; }
+}
+
+/* Hide mobile nav links on sm and above, show only on xs */
+@media (min-width: 768px) {
+  #mobile-menu {
+    display: none !important;
+  }
+}
